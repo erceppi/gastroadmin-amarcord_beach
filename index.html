@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Amarcord Beach - GastroAdmin</title>
+    <!-- Enlaces a archivos de estilos CSS -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <header>
+      <!-- Encabezado o barra de navegación -->
+      <nav>
+        <!-- Elementos de navegación o menú -->
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="ordenes.html">Órdenes</a></li>
+          <li><a href="reportes.html">Reportes</a></li>
+          <li><a href="menu.html">Menú</a></li>
+          <!-- Más elementos del menú si es necesario -->
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Contenido principal -->
+      <section class="ordenes">
+        <!-- Sección para visualizar la orden actual -->
+        <article>
+          <!-- Aquí se mostrará la información de la orden activa -->
+          <!-- Puedes llenar dinámicamente esta sección desde el backend -->
+          <h2>Orden Actual</h2>
+          <!-- Muestra detalles de la orden actual, como número de mesa, cantidad de personas, etc. -->
+          <p>Número de Mesa: <span id="infoMesa">1</span></p>
+          <p>Cantidad de Personas: <span id="infoPersonas">2</span></p>
+          <p>Productos:</p>
+          <ul id="listaProductos">
+            <!-- La lista de productos se llenará dinámicamente -->
+            <!-- Ejemplo: <li>Producto 1 - Cantidad: 2</li> -->
+          </ul>
+          <p>Total: <span id="infoTotal">0.00</span> Soles</p>
+        </article>
+
+        <!-- Sección para agregar productos -->
+        <form>
+          <h2>Agregar Productos</h2>
+          <label for="inputMesa">Número de Mesa:</label>
+          <input
+            type="text"
+            id="inputMesa"
+            placeholder="Número de Mesa"
+            required
+          />
+
+          <label for="inputPersonas">Cantidad de Personas:</label>
+          <input
+            type="number"
+            id="inputPersonas"
+            placeholder="Cantidad de Personas"
+            required
+          />
+
+          <h3>Seleccionar Producto:</h3>
+          <select id="selectProducto">
+            <!-- Opciones de productos, se pueden cargar dinámicamente desde el backend -->
+            <option value="producto1">Producto 1</option>
+            <option value="producto2">Producto 2</option>
+            <!-- Agregar más opciones según los productos disponibles -->
+          </select>
+
+          <label for="inputCantidad">Cantidad:</label>
+          <input
+            type="number"
+            id="inputCantidad"
+            placeholder="Cantidad"
+            required
+          />
+
+          <button type="button" onclick="agregarProducto()">
+            Agregar Producto
+          </button>
+        </form>
+      </section>
+
+      <!-- Tabla para mostrar las órdenes abiertas (puedes mantenerla si es necesaria) -->
+      <table id="tablaOrdenes">
+        <thead>
+          <tr>
+            <th>Producto</th>
+            <th>Mesa</th>
+            <th>Personas</th>
+            <th>Cantidad</th>
+            <th>Subtotal</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Filas de la tabla, se agregarán dinámicamente desde el frontend o backend -->
+        </tbody>
+      </table>
+
+      <!-- Resumen del monto total (puedes mantenerlo si es necesario) -->
+      <section id="resumenTotal">
+        <h3>Monto Total: <span id="montoTotal">0.00</span> Soles</h3>
+      </section>
+    </main>
+
+    <footer>
+      <!-- Pie de página -->
+      <!-- Información adicional o enlaces útiles -->
+    </footer>
+
+    <!-- Script para agregar productos y actualizar la tabla -->
+    <script src="main.js"></script>
+  </body>
+</html>

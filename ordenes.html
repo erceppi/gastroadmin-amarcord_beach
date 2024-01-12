@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Amarcord Beach - Órdenes</title>
+    <!-- Enlaces a archivos de estilos CSS -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <header>
+      <!-- Encabezado o barra de navegación -->
+      <nav>
+        <!-- Elementos de navegación o menú -->
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="ordenes.html">Órdenes</a></li>
+          <li><a href="reportes.html">Reportes</a></li>
+          <li><a href="menu.html">Menú</a></li>
+          <!-- Más elementos del menú si es necesario -->
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Contenido específico de la sección de órdenes -->
+      <h1>Órdenes</h1>
+
+      <!-- Menú dinámico lateral para alternar entre órdenes activas y concluidas -->
+      <aside>
+        <h2>Menú de Órdenes</h2>
+        <ul id="menuOrdenes">
+          <li>
+            <a href="#" onclick="mostrarOrdenes('activas')">Órdenes Activas</a>
+          </li>
+          <li>
+            <a href="#" onclick="mostrarOrdenes('concluidas')"
+              >Órdenes Concluidas</a
+            >
+          </li>
+        </ul>
+      </aside>
+
+      <!-- Listado de órdenes -->
+      <section id="listaOrdenes">
+        <!-- Aquí se cargarán dinámicamente las órdenes -->
+      </section>
+
+      <!-- Detalle de la orden seleccionada -->
+      <article id="detalleOrden">
+        <!-- Aquí se mostrará el detalle de la orden seleccionada -->
+      </article>
+    </main>
+
+    <footer>
+      <!-- Pie de página -->
+      <!-- Información adicional o enlaces útiles -->
+    </footer>
+
+    <!-- Script para cargar y mostrar órdenes -->
+    <script src="main.js"></script>
+    <script src="ordenes.js"></script>
+  </body>
+</html>

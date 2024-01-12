@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Amarcord Beach - Menú</title>
+    <!-- Enlaces a archivos de estilos CSS -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <header>
+      <!-- Encabezado o barra de navegación -->
+      <nav>
+        <!-- Elementos de navegación o menú -->
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="ordenes.html">Órdenes</a></li>
+          <li><a href="reportes.html">Reportes</a></li>
+          <li><a href="menu.html">Menú</a></li>
+          <!-- Más elementos del menú si es necesario -->
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Contenido específico de la sección de menú -->
+      <h1>Menú - Página en construcción</h1>
+      <p>
+        Aquí escribiremos el código para la edición y visualización del menú.
+      </p>
+
+      <!-- Formulario para agregar nuevos productos -->
+      <form id="formMenu">
+        <label for="selectTipo">Tipo:</label>
+        <select id="selectTipo" required>
+          <option value="Entrada">Entrada</option>
+          <option value="Pizza">Pizza</option>
+          <option value="Postre">Postre</option>
+          <option value="Bebida">Bebida</option>
+        </select>
+
+        <label for="selectSubtipo">Subtipo:</label>
+        <select id="selectSubtipo" required>
+          <!-- Subcategorías se cargarán dinámicamente según la selección del tipo -->
+        </select>
+
+        <label for="inputNombreProducto">Nombre del Producto:</label>
+        <input type="text" id="inputNombreProducto" required />
+
+        <label for="inputPrecio">Precio:</label>
+        <input type="number" id="inputPrecio" step="0.01" required />
+
+        <label for="inputPromocion">Promoción:</label>
+        <input type="text" id="inputPromocion" />
+
+        <button type="button" onclick="agregarProductoMenu()">
+          Agregar Producto
+        </button>
+      </form>
+    </main>
+
+    <footer>
+      <!-- Pie de página -->
+      <!-- Información adicional o enlaces útiles -->
+    </footer>
+  </body>
+</html>
