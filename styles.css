@@ -33,32 +33,44 @@ nav ul li a {
 /* Estilos para el contenido principal */
 main {
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centrar elementos horizontalmente */
 }
 
 /* Estilos para secciones específicas */
 .ordenes {
   display: flex;
-  justify-content: space-between;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+  width: 100%;
 }
 
-.orden-actual-container {
-  flex-basis: 48%; /* Ancho del contenedor de la orden actual */
+.orden-actual-container,
+.agregar-productos {
+  flex-grow: 1; /* Expansión para ocupar el espacio restante */
+  max-width: 48%; /* Ancho máximo de cada sección */
+  justify-content: center;
 }
 
-.orden-actual {
+.orden-actual,
+.agregar-productos {
   background-color: #f0f0f0; /* Fondo gris claro */
   padding: 20px;
   margin-bottom: 20px;
+  text-align: center; /* Centrar contenido dentro de cada sección */
+  justify-content: center;
 }
 
-.agregar-productos {
-  flex-basis: 48%; /* Ancho del formulario de agregar productos */
-}
-
-#formOrden {
+form {
   display: grid;
   gap: 10px;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: 1fr;
+  max-width: 400px; /* Establece el ancho máximo del formulario según tus preferencias */
+}
+
+label[for="inputPersonas"] {
+  grid-column: 1; /* Opcional, pero asegura que el label de personas ocupe la primera columna */
 }
 
 #tablaOrdenes {
@@ -96,5 +108,6 @@ footer {
   .orden-actual-container,
   .agregar-productos {
     flex-basis: 100%; /* Ancho completo en pantallas pequeñas */
+    max-width: none; /* Remover el ancho máximo en pantallas pequeñas */
   }
 }
